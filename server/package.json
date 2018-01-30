@@ -1,0 +1,34 @@
+{
+  "name": "todo-mongo-graphql-server",
+  "version": "1.0.0",
+  "description": "GraphQL server for Todo List",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorlima/todo-mongo-graphql-server.git"
+  },
+  "keywords": [
+    "GraphQL"
+  ],
+  "author": "igorlima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igorlima/todo-mongo-graphql-server/issues"
+  },
+  "homepage": "https://github.com/igorlima/todo-mongo-graphql-server#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-graphql": "^0.4.4",
+    "graphql": "^0.4.12",
+    "mongoose": "^4.2.5"
+  },
+  "standard": {
+    "ignore": [
+      "Procfile"
+    ]
+  }
+}
