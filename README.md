@@ -14,7 +14,8 @@ I hope this repo is useful to anyone that may already be familiar with one libra
 - [React.createContext](https://github.com/thejameskyle/create-react-context)
 
 ### How to use:
-- [Compare each library's state logic and connected components](https://github.com/robertgonzales/compare-react-state-management/tree/master/client/src).
+- [Familiarize yourself with implementation of library you already know](https://github.com/robertgonzales/compare-react-state-management/tree/master/client/src).
+- [Compare to another library's state logic and connected components](https://github.com/robertgonzales/compare-react-state-management/tree/master/client/src).
 - [See shared presentational components and utils](https://github.com/robertgonzales/compare-react-state-management/tree/master/client/src/shared).
 
 ### To run the project:
