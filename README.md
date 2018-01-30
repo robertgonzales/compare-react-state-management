@@ -8,10 +8,10 @@ I hope this repo is useful to anyone that may already be familiar with one libra
 - Common and best practices.
 
 ### Libraries implemented:
-- Apollo
-- MobX
-- Redux
-- React.createContext
+- [Apollo](https://www.apollographql.com/docs/react/)
+- [MobX](https://mobx.js.org/)
+- [Redux](https://redux.js.org/)
+- [React.createContext](https://github.com/thejameskyle/create-react-context)
 
 ### How to use:
 - [Compare each library's state logic and connected components](https://github.com/robertgonzales/compare-react-state-management/tree/master/client/src).
