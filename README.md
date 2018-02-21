@@ -18,7 +18,7 @@ I hope this repo is useful to anyone that may already be familiar with one libra
 - [Familiarize yourself with implementation of library you already know](https://github.com/robertgonzales/compare-react-state-management/tree/master/client/src).
 - [**Compare to another library's state logic and connected components**](https://github.com/robertgonzales/compare-react-state-management/tree/master/client/src).
 
-![redux-vs-apollo-example](https://user-images.githubusercontent.com/7729885/36496615-d2ce32ca-1706-11e8-9e4c-d785ea47a0cb.jpg)
+![redux-vs-apollo-example](https://user-images.githubusercontent.com/7729885/36496808-7257e160-1707-11e8-8bce-0265146fa7ab.jpg)
 
 
 ### To run the project:
