@@ -37,11 +37,15 @@ class TodoApp extends Component {
 }
 
 export default connect(
+  // map state to props
   state => ({
+    // pass error and loading props
     error: state.todos.error,
     loading: state.todos.loading,
   }),
+  // map dispatch to props
   dispatch => ({
+    // trigger loadTodos when component mounts
     loadTodos: () => dispatch(loadTodos()),
   })
 )(TodoApp)

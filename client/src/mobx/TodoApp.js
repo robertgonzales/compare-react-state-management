@@ -35,8 +35,11 @@ class TodoApp extends Component {
   }
 }
 
+// map store to props
 export default inject(stores => ({
+  // pass error and loading props
   error: stores.todoStore.error,
   loading: stores.todoStore.loading,
+  // trigger loadTodos when component mounts
   loadTodos: () => stores.todoStore.loadTodos(),
 }))(TodoApp)

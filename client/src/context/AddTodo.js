@@ -2,9 +2,9 @@ import React from "react"
 import { Input } from "../shared/components"
 import { TodosContext } from "./TodosStore"
 
-const AddTodo = props => (
+const AddTodo = () => (
   <TodosContext.Consumer>
-    {({ addTodo }) => <Input {...props} onSubmit={title => addTodo(title)} />}
+    {({ addTodo }) => <Input onSubmit={title => addTodo(title)} />}
   </TodosContext.Consumer>
 )
 
