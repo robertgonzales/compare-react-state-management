@@ -3,7 +3,7 @@ import { TODOS_QUERY } from "../shared/queries"
 import { ADD_TODO_MUTATION } from "../shared/mutations"
 import { Input } from "../shared/components"
 
-export default graphql(ADD_TODO_MUTATION, {
+const AddTodo = graphql(ADD_TODO_MUTATION, {
   // map mutation to props
   props: ({ mutate }) => ({
     // onSubmit prop passes title
@@ -22,3 +22,5 @@ export default graphql(ADD_TODO_MUTATION, {
       }),
   }),
 })(Input)
+
+export default AddTodo

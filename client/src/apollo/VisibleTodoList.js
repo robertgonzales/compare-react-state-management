@@ -6,7 +6,7 @@ import { VISIBILITY_FILTER_QUERY } from "./clientVisibility"
 import { getVisibleTodos } from "../shared/selectors"
 import { TodoList } from "../shared/components"
 
-export default compose(
+const VisibleTodoList = compose(
   graphql(VISIBILITY_FILTER_QUERY, {
     // map filter query to props
     props: ({ data }) => ({
@@ -50,3 +50,5 @@ export default compose(
     }),
   })
 )(TodoList)
+
+export default VisibleTodoList

@@ -1,9 +1,10 @@
+import PropTypes from "prop-types"
 import { compose, graphql } from "react-apollo"
 import { VISIBILITY_FILTER_QUERY } from "./clientVisibility"
 import { VISIBILITY_FILTER_MUTATION } from "./clientVisibility"
 import { Link } from "../shared/components"
 
-export default compose(
+const FilterLink = compose(
   graphql(VISIBILITY_FILTER_QUERY, {
     // map query to props
     props: ({ data, ownProps }) => ({
@@ -19,3 +20,9 @@ export default compose(
     }),
   })
 )(Link)
+
+FilterLink.propTypes = {
+  filter: PropTypes.string.isRequired,
+}
+
+export default FilterLink
