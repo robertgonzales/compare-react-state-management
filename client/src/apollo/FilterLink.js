@@ -1,13 +1,21 @@
-import React from "react"
-import { compose } from "react-apollo"
+import { compose, graphql } from "react-apollo"
+import { VISIBILITY_FILTER_QUERY } from "./clientVisibility"
+import { VISIBILITY_FILTER_MUTATION } from "./clientVisibility"
 import { Link } from "../shared/components"
-import withVisibilityFilter from "./withVisibilityFilter"
-import withSetVisibility from "./withSetVisibility"
 
-export default compose(withVisibilityFilter, withSetVisibility)(props => (
-  <Link
-    {...props}
-    active={props.visibilityFilter === props.filter}
-    onClick={() => props.setVisibility(props.filter)}
-  />
-))
+export default compose(
+  graphql(VISIBILITY_FILTER_QUERY, {
+    // map query to props
+    props: ({ data, ownProps }) => ({
+      // active prop is true if filter query matches passed filter prop
+      active: data.visibilityFilter === ownProps.filter,
+    }),
+  }),
+  graphql(VISIBILITY_FILTER_MUTATION, {
+    // map mutation to props
+    props: ({ mutate, ownProps }) => ({
+      // onClick prop triggers mutation, uses passed filter prop
+      onClick: () => mutate({ variables: { filter: ownProps.filter } }),
+    }),
+  })
+)(Link)

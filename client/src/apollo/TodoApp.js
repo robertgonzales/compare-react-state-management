@@ -1,10 +1,11 @@
 import React from "react"
-import AddTodo from "./AddTodo"
-import FilterLink from "./FilterLink"
+import { graphql } from "react-apollo"
+import { TODOS_QUERY } from "../shared/queries"
 import VisibleTodoList from "./VisibleTodoList"
-import withTodos from "./withTodos"
+import FilterLink from "./FilterLink"
+import AddTodo from "./AddTodo"
 
-export default withTodos(props => {
+const TodoApp = props => {
   if (props.error) {
     return "An unexpected error occurred"
   }
@@ -27,4 +28,13 @@ export default withTodos(props => {
       </footer>
     </React.Fragment>
   )
-})
+}
+
+export default graphql(TODOS_QUERY, {
+  // map query to props
+  props: ({ data }) => ({
+    // pass error and loading props
+    error: data.error,
+    loading: data.loading,
+  }),
+})(TodoApp)

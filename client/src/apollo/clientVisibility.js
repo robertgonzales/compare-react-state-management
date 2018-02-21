@@ -1,7 +1,6 @@
 import gql from "graphql-tag"
 
 // client state query
-
 export const VISIBILITY_FILTER_QUERY = gql`
   query {
     visibilityFilter @client
@@ -9,7 +8,6 @@ export const VISIBILITY_FILTER_QUERY = gql`
 `
 
 // client state mutation
-
 export const VISIBILITY_FILTER_MUTATION = gql`
   mutation($filter: String!) {
     setVisibilityFilter(filter: $filter) @client
@@ -17,7 +15,6 @@ export const VISIBILITY_FILTER_MUTATION = gql`
 `
 
 // client state link
-
 export default {
   defaults: {
     visibilityFilter: "SHOW_ALL",
